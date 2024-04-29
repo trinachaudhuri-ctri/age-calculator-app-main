@@ -1,37 +1,140 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Age calculator app</title>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
+    <title>Frontend Mentor | Age calculator app</title>
 
-  Day
-  DD
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      body {
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-color: #f2f2f2;
+      }
+      .container {
+        background-color: white;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+        border-bottom-left-radius: 20px;
+        border-bottom-right-radius: 120px;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+        padding: 12px;
+        width: 80%;
+        max-width: 500px;
+        max-height: 800px;
+        height: 40%;
+      }
 
-  Month
-  MM
+      .dash-container {
+        font-size: 12px;
+        color: black;
+      }
 
-  Year
-  YYYY
+      .dash-row {
+        display: flex;
+        align-items: center;
+      }
 
-  -- years
-  -- months
-  -- days
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
-</body>
+      .dash {
+        width: 10px;
+        height: 5px;
+        background-color: purple;
+        margin-right: 10px;
+      }
+
+      .dash:nth-child(1) {
+        margin-left: 12px;
+      }
+      .horizontal-line {
+        width: calc(100% - 24px); /* 12 pixels on each side */
+        margin: 0 auto; /* Center the line horizontally */
+        border-top: 0.5px solid grey; /* 1 pixel solid black line */
+      }
+
+      .text {
+        margin-right: 10px;
+      }
+
+      .input-container {
+        display: flex;
+        flex-wrap: wrap;
+      }
+
+      .input-container > div {
+        flex: 1; /* Allow items to grow and shrink */
+        padding: 12px;
+        min-width: 0;
+      }
+
+      input {
+        height: 30px;
+        width: 80px;
+        font-family: "Poppins-Bold";
+        font-size: 20px;
+        color: grey;
+        border: 0.5px solid grey;
+        border-radius: 5px;
+        padding: 5px;
+      }
+      h1 {
+        font-family: "Poppins-Bold"; /* Set font to Poppins-Bold */
+        font-size: 8px; /* Set font size to 8 pixels */
+        color: grey; /* Set text color to grey */
+        margin-right: 10px;
+      }
+      h2 {
+        font-family: "Poppins-Bold";
+        font-size: 30px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="input-container">
+        <div>
+          <h1>DAY</h1>
+          <input type="number" name="day" id="day" placeholder="DD" />
+        </div>
+        <div>
+          <h1>MONTH</h1>
+          <input type="number" name="month" id="month" placeholder="MM" />
+        </div>
+        <div>
+          <h1>YEAR</h1>
+          <input type="number" name="year" id="year" placeholder="YY" />
+        </div>
+      </div>
+      <div class="horizontal-line"></div>
+      <div class="dash-container">
+        <div class="dash-row">
+          <div class="dash"></div>
+          <div class="dash"></div>
+          <h2 class="text">years</h2>
+        </div>
+        <div class="dash-row">
+          <div class="dash"></div>
+          <div class="dash"></div>
+          <h2 class="text">months</h2>
+        </div>
+        <div class="dash-row">
+          <div class="dash"></div>
+          <div class="dash"></div>
+          <h2 class="text">days</h2>
+        </div>
+      </div>
+    </div>
+  </body>
 </html>
