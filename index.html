@@ -15,93 +15,10 @@
     <title>Frontend Mentor | Age calculator app</title>
 
     <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-    <style>
-      body {
-        margin: 0;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100vh;
-        background-color: #f2f2f2;
-      }
-      .container {
-        background-color: white;
-        border-top-left-radius: 20px;
-        border-top-right-radius: 20px;
-        border-bottom-left-radius: 20px;
-        border-bottom-right-radius: 120px;
-        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-        padding: 12px;
-        width: 80%;
-        max-width: 500px;
-        max-height: 800px;
-        height: 40%;
-      }
-
-      .dash-container {
-        font-size: 12px;
-        color: black;
-      }
-
-      .dash-row {
-        display: flex;
-        align-items: center;
-      }
-
-      .dash {
-        width: 10px;
-        height: 5px;
-        background-color: purple;
-        margin-right: 10px;
-      }
-
-      .dash:nth-child(1) {
-        margin-left: 12px;
-      }
-      .horizontal-line {
-        width: calc(100% - 24px); /* 12 pixels on each side */
-        margin: 0 auto; /* Center the line horizontally */
-        border-top: 0.5px solid grey; /* 1 pixel solid black line */
-      }
-
-      .text {
-        margin-right: 10px;
-      }
-
-      .input-container {
-        display: flex;
-        flex-wrap: wrap;
-      }
-
-      .input-container > div {
-        flex: 1; /* Allow items to grow and shrink */
-        padding: 12px;
-        min-width: 0;
-      }
-
-      input {
-        height: 30px;
-        width: 80px;
-        font-family: "Poppins-Bold";
-        font-size: 20px;
-        color: grey;
-        border: 0.5px solid grey;
-        border-radius: 5px;
-        padding: 5px;
-      }
-      h1 {
-        font-family: "Poppins-Bold"; /* Set font to Poppins-Bold */
-        font-size: 8px; /* Set font size to 8 pixels */
-        color: grey; /* Set text color to grey */
-        margin-right: 10px;
-      }
-      h2 {
-        font-family: "Poppins-Bold";
-        font-size: 30px;
-      }
-    </style>
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+    <script src="script.js"></script>
     <div class="container">
       <div class="input-container">
         <div>
@@ -118,20 +35,24 @@
         </div>
       </div>
       <div class="horizontal-line"></div>
+      <button onclick="return getDOB()">submit</button>
       <div class="dash-container">
         <div class="dash-row">
           <div class="dash"></div>
           <div class="dash"></div>
+          <h2 id="years" class="text"></h2>
           <h2 class="text">years</h2>
         </div>
         <div class="dash-row">
           <div class="dash"></div>
           <div class="dash"></div>
+          <h2 id="months" class="text"></h2>
           <h2 class="text">months</h2>
         </div>
         <div class="dash-row">
           <div class="dash"></div>
           <div class="dash"></div>
+          <h2 id="days" class="text"></h2>
           <h2 class="text">days</h2>
         </div>
       </div>
